@@ -1,16 +1,16 @@
 import random
+from gera_valor_aleatorio import gera_resposta
 
 class Jogo_azar:
 
     def __init__(self):
         '''O jogo gera um numero aleatorio e vai dando dicas até que acerte.'''
-        
-        self.gera_resposta()
-        self.main()
-      
 
+        self.main()
+        
     def main(self):
-        resposta = self.gera_resposta()
+        resposta = int(gera_resposta())
+        print(resposta)
         tentativa = 0
         print("\nPalpite gerado!")
 
@@ -30,10 +30,6 @@ class Jogo_azar:
         except Exception as e:
             print(e)
         
-
-    def gera_resposta(self):
-        resposta = random.randint(1,9)
-        return resposta
 
 if __name__ == '__main__':    
     Jogo_azar()
