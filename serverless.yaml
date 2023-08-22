@@ -15,7 +15,7 @@ functions:
     handler: wsgi_handler.handler
     events:
       - httpApi:
-          path: /
+          path: /gera_nova_resposta
           method: get
       - httpApi:
           path: /jogo_azar
